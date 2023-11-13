@@ -4,12 +4,12 @@ export class Coffee {
     private _image_url: string,
     private _name: string,
     private _tagline: string,
-    private _first_roasted: string,
-    private _strength_level: string,
     private _description: string,
+    private _first_roasted: string,
+    private _roaster_tips: string,
+    private _strength_level: number,
     private _contributed_by: string
   ) {}
-
   public get id(): string {
     return this._id;
   }
@@ -37,10 +37,10 @@ export class Coffee {
   public set first_roasted(value: string) {
     this._first_roasted = value;
   }
-  public get strength_level(): string {
+  public get strength_level(): number {
     return this._strength_level;
   }
-  public set strength_level(value: string) {
+  public set strength_level(value: number) {
     this._strength_level = value;
   }
   public get description(): string {
@@ -54,5 +54,11 @@ export class Coffee {
   }
   public set contributed_by(value: string) {
     this._contributed_by = value;
+  }
+  public get roaster_tips(): string {
+    return this._roaster_tips;
+  }
+  public set roaster_tips(value: string) {
+    this._roaster_tips = value;
   }
 }
