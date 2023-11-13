@@ -1,11 +1,8 @@
 <section *ngIf="coffee">
-  <h3 class="card-title">{{ coffee.name }}</h3>
-  <p>{{ coffee.first_roasted }}</p>
-  <img
-    src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/A_small_cup_of_coffee.JPG/640px-A_small_cup_of_coffee.JPG"
-    alt="Coffee"
-  />
+  <h1>{{ coffee.name }}</h1>
   <p>{{ coffee.description }}</p>
+  <p>{{ coffee.first_roasted }}</p>
+  <img [src]="coffee.image_url" alt="Coffee" />
   <p>Tagline: {{ coffee.tagline }}</p>
   <p>Strength Level: {{ coffee.strength_level }}</p>
   <p>Contributed by: {{ coffee.contributed_by }}</p>

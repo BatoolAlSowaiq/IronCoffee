@@ -1,18 +1,20 @@
 <ul class="container">
   <li class="card p-4 mb-3" *ngFor="let coffee of coffees">
-    <img [src]="coffee.image_url" alt="Coffee Image" />
-    <div class="card-body">
-      <h2 class="card-title">
-        <a href="">{{ coffee.name }}</a>
-      </h2>
-      <div class="card-text">
-        <p>
-          <a href="">{{ coffee.tagline }}</a>
-        </p>
-        <p>
-          <a href="">Contributed by: {{ coffee.contributed_by }}</a>
-        </p>
+    <a [routerLink]="['/Coffees', coffee._id]">
+      <img [src]="coffee.image_url" alt="Coffee Image" />
+      <div class="card-body">
+        <h2 class="card-title">
+          <a href="">{{ coffee.name }}</a>
+        </h2>
+        <div class="card-text">
+          <p>
+            <a href="">{{ coffee.tagline }}</a>
+          </p>
+          <p>
+            <a href="">Contributed by: {{ coffee.contributed_by }}</a>
+          </p>
+        </div>
       </div>
-    </div>
+    </a>
   </li>
 </ul>

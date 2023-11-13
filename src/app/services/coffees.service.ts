@@ -15,7 +15,7 @@ export class CoffeesService {
   getAllCoffees(): Observable<any> {
     return this.http.get<Coffee[]>(this.API_URL);
   }
-  getCoffeeById(id: number): Observable<Coffee> {
-    return this.http.get<Coffee>(this.API_URL + "/" + id);
+  getCoffeeById(id: any): Observable<Coffee> {
+    return this.http.get<any>(this.API_URL + "/" + id);
   }
 }
