@@ -1,0 +1,9 @@
+<section *ngIf="coffee">
+    <h1>{{ coffee.name }}</h1>
+    <p>{{ coffee.description }}</p>
+    <p>{{ coffee.first_roasted }}</p>
+    <img [src]="coffee.image_url" alt="Coffee" />
+    <p>Tagline: {{ coffee.tagline }}</p>
+    <p>Strength Level: {{ coffee.strength_level }}</p>
+    <p>Contributed by: {{ coffee.contributed_by }}</p>
+  </section>

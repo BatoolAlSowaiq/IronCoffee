@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Coffee } from 'src/app/models/coffee.model';
 import { CoffeesService } from 'src/app/services/coffees.service';
 
 @Component({
@@ -9,12 +8,15 @@ import { CoffeesService } from 'src/app/services/coffees.service';
   styleUrls: ['./single-coffee.component.css'],
 })
 export class SingleCoffeeComponent implements OnInit {
-  coffee: any = [];
-  id: any = null;
+  coffee: any;
+  id: string;
   constructor(
     private activatedRoute: ActivatedRoute,
     private coffeeService: CoffeesService
-  ) {}
+  ) {
+    this.coffee = [];
+    this.id = '';
+  }
 
   ngOnInit(): void {
     console.log(this.activatedRoute);
@@ -26,7 +28,7 @@ export class SingleCoffeeComponent implements OnInit {
       },
       error: (e) => {
         console.log(e);
-        alert(`Error: ${e}`);
+        alert(`Error has been acquired`);
       },
     });
   }

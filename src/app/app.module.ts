@@ -8,13 +8,15 @@ import { SingleCoffeeComponent } from './components/single-coffee/single-coffee.
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
+import { RandomCoffeeComponent } from './components/random-coffee/random-coffee.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     CoffeesComponent,
-    SingleCoffeeComponent
+    SingleCoffeeComponent,
+    RandomCoffeeComponent
   ],
   imports: [
     BrowserModule,
