@@ -1,3 +1,4 @@
+<app-search-by-name (searchTextEvent)="searchText($event)"></app-search-by-name>
 <ul class="container">
   <li class="card p-4 mb-3" *ngFor="let coffee of coffees">
     <a [routerLink]="['/Coffees', coffee._id]">

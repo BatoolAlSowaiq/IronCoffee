@@ -19,6 +19,7 @@ import {MatInputModule} from '@angular/material/input';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { SearchByNameComponent } from './components/search-by-name/search-by-name.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     SingleCoffeeComponent,
     RandomCoffeeComponent,
     HeaderComponent,
-    NewCoffeeComponent
+    NewCoffeeComponent,
+    SearchByNameComponent
   ],
   imports: [
     BrowserModule,

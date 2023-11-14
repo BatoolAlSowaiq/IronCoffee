@@ -20,7 +20,7 @@ export class NewCoffeeComponent {
   strengthLevelInput: FormControl;
   contributedByInput: FormControl;
 
-  constructor(private coffeeService: CoffeesService , private snackBar: MatSnackBar) {
+  constructor(private coffeesService: CoffeesService , private snackBar: MatSnackBar) {
 
     this.nameInput = new FormControl('', Validators.required);
     this.taglineInput = new FormControl('', Validators.required);
@@ -48,18 +48,18 @@ export class NewCoffeeComponent {
     if (this.registerForm.valid) {
       const body = this.registerForm.value;
 
-      this.coffeeService.createCoffee(body).subscribe(
+      this.coffeesService.createCoffee(body).subscribe(
         (response) => {
-          console.log('Coffee created:', response);
+          console.log('New Coffee created:', response);
 
-          this.snackBar.open('Coffee created successfully! Thank you.', 'Close', {
+          this.snackBar.open('New coffee created successfully! Thank you.', 'Close', {
             duration: 20000,
           });
 
           this.registerForm.reset();
         },
         (error) => {
-          console.error('Error creating coffee:', error);
+          console.error('Error creating new coffee:', error);
         }
       );
     }

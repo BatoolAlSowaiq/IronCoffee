@@ -1,0 +1,7 @@
+<form class="search">
+  <mat-form-field>
+    <input class="toolbar-search" type="text" matInput placeholder="Search by name" [(ngModel)]="queryName"
+      [ngModelOptions]="{standalone: true}" (input)="search()">
+    <mat-icon matSuffix style="font-size: 1.2em">search</mat-icon>
+  </mat-form-field>
+</form>
