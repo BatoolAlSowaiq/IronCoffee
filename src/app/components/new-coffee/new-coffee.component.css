@@ -1,0 +1,21 @@
+.container {
+    font-family: cursive;
+    align-items: center;
+    text-align: center;
+    width: 50%;
+    height: 50%;
+    margin: 0 auto;
+    padding-top: 50px;
+    display: block;
+  }
+  
+  .form {
+    justify-content: space-between;
+  }
+  .error-msg {
+    color: red;
+    background-color: antiquewhite;
+  }
+  .error-field {
+    border: 2px solid red;
+  }
