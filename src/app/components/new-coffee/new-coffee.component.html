@@ -1,6 +1,8 @@
+
 <div class="container">
-    <h3>Create a New Coffee</h3>
-    <form (ngSubmit)="onSubmit()" [formGroup]="registerForm" class="form">
+    <h1>Create a New Coffee</h1>
+
+    <form (ngSubmit)="onSubmit()" [formGroup]="registerForm">
 
         <mat-form-field>
             <mat-label>Name:</mat-label>
@@ -12,6 +14,7 @@
         <br>
 
         <mat-form-field>
+            <mat-label>Tagline:</mat-label>
             <input matInput type="text" formControlName="tagline" />
             <mat-error *ngIf="taglineInput.invalid && taglineInput.touched">
                 Tagline error...
@@ -20,6 +23,7 @@
         <br>
 
         <mat-form-field>
+            <mat-label>Description:</mat-label>
             <textarea matInput formControlName="description" rows="3"></textarea>
             <mat-error *ngIf="descriptionInput.invalid && descriptionInput.touched">
                 Description error...
@@ -28,6 +32,7 @@
         <br>
 
         <mat-form-field>
+            <mat-label>First Roasted:</mat-label>
             <input matInput type="text" formControlName="first_roasted" />
             <mat-error *ngIf="firstRoastedInput.invalid && firstRoastedInput.touched">
                 First Roasted error...
@@ -36,6 +41,7 @@
         <br>
 
         <mat-form-field>
+            <mat-label>Roaster Tips:</mat-label>
             <textarea matInput formControlName="roaster_tips" rows="3"></textarea>
             <mat-error *ngIf="roasterTipsInput.invalid && roasterTipsInput.touched">
                 Roaster Tips error...
@@ -44,6 +50,7 @@
         <br>
 
         <mat-form-field>
+            <mat-label>Strength Level:</mat-label>
             <input matInput type="number" formControlName="strength_level" />
             <mat-error *ngIf="strengthLevelInput.invalid && strengthLevelInput.touched">
                 Strength Level error...
@@ -52,6 +59,7 @@
         <br>
 
         <mat-form-field>
+            <mat-label>Contributed By:</mat-label>
             <input matInput type="text" formControlName="contributed_by" />
             <mat-error *ngIf="contributedByInput.invalid && contributedByInput.touched">
                 Contributed By error...
@@ -59,10 +67,12 @@
         </mat-form-field>
         <br>
 
-        <button type="submit" [disabled]="registerForm.invalid" mat-raised-button color="accent">
+        <button type="submit" 
+        (click)="onSubmit()"[disabled]="registerForm.invalid" mat-raised-button color="accent">
             Create Coffee
         </button>
 
     </form>
+
 
 </div>

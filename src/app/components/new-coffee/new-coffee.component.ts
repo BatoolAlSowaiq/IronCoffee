@@ -52,12 +52,11 @@ export class NewCoffeeComponent {
         (response) => {
           console.log('Coffee created:', response);
 
-          this.snackBar.open('Submission successful! Thank you.', 'Close', {
+          this.snackBar.open('Coffee created successfully! Thank you.', 'Close', {
             duration: 20000,
           });
 
           this.registerForm.reset();
-          window.location.reload();
         },
         (error) => {
           console.error('Error creating coffee:', error);
