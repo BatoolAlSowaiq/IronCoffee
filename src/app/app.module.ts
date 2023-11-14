@@ -9,6 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { RandomCoffeeComponent } from './components/random-coffee/random-coffee.component';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { RandomCoffeeComponent } from './components/random-coffee/random-coffee.
     HomeComponent,
     CoffeesComponent,
     SingleCoffeeComponent,
-    RandomCoffeeComponent
+    RandomCoffeeComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
