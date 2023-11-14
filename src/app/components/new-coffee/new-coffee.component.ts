@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { HttpClient } from '@angular/common/http';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { CoffeesService } from 'src/app/services/coffees.service';
 
@@ -64,17 +63,7 @@ export class NewCoffeeComponent {
           console.error('Error creating coffee:', error);
         }
       );
-    } else {
-      this.markFormGroupTouched(this.registerForm);
     }
   }
-  markFormGroupTouched(formGroup: FormGroup) {
-    Object.values(formGroup.controls).forEach((control) => {
-      control.markAsTouched();
-
-      if (control instanceof FormGroup) {
-        this.markFormGroupTouched(control);
-      }
-    });
-  }
+  
 }
